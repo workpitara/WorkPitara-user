@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WorkPitara — Official Company Platform | INDIA KA APNA WORK ADDA</title>
+  <meta name="description" content="WorkPitara Company Site - Structured digital task management, verification workflows, training SOPs and official helpdesk support." />
+  
+  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons for UI -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandDark: '#0F2A4A',
+            brandOrange: '#FF6A00',
+            brandOrangeHover: '#E05D00',
+            brandBlue: '#1D4ED8',
+            brandLight: '#F8FAFC',
+            brandSlate: '#1E3A5F',
+          },
+          fontFamily: {
+            sans: ['"Inter"', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #1e293b;
+      background-color: #ffffff;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .hero-pattern {
+      background-color: #0F2A4A;
+      background-image: radial-gradient(rgba(255, 106, 0, 0.14) 1px, transparent 1px), radial-gradient(rgba(255, 255, 255, 0.08) 1px, #0F2A4A 1px);
+      background-size: 36px 36px;
+      background-position: 0 0, 18px 18px;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 9999px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+    .modal-backdrop {
+      background-color: rgba(15, 42, 74, 0.78);
+      backdrop-filter: blur(4px);
+    }
+  </style>
+</head>
+<body id="top" class="bg-white text-slate-800 antialiased selection:bg-brandOrange selection:text-white">
+
+  <!-- ========================================================= -->
+  <!-- HEADER NAVIGATION (WORKPITARA COMPANY SITE HEADER)        -->
+  <!-- Styling: White background, Sticky top,                    -->
+  <!-- Box shadow 0 2px 10px rgba(0,0,0,.1), Padding 12px 16px   -->
+  <!-- Menu links: 13px, weight 600, Color #0F2A4A, Gap 14px,    -->
+  <!-- Hover #FF6A00. Portal Login: #0F2A4A, rounded 999px       -->
+  <!-- ========================================================= -->
+  <header class="sticky top-0 z-50 bg-white" style="box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 12px 16px;">
+    <div class="max-w-[1400px] mx-auto flex items-center justify-between">
+      
+      <!-- Left: WP Blue Circle Logo, WorkPitara, INDIA KA APNA WORK ADDA -->
+      <a href="#top" class="flex items-center gap-2.5 shrink-0 group">
+        <div class="w-10 h-10 rounded-full bg-[#0F2A4A] border-2 border-brandOrange flex items-center justify-center shadow-xs group-hover:scale-105 transition-transform">
+          <span class="text-white font-extrabold text-base font-display tracking-tight">WP</span>
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center gap-1">
+            <span class="text-xl font-black text-[#0F2A4A] tracking-tight font-display">WorkPitara</span>
+            <span class="w-1.5 h-1.5 rounded-full bg-brandOrange"></span>
+          </div>
+          <span class="text-[8.5px] uppercase tracking-wider font-bold text-slate-500">INDIA KA APNA WORK ADDA</span>
+        </div>
+      </a>
+
+      <!-- Center: Menu links (min-width 1024px: lg:flex in one horizontal line, no hamburger) -->
+      <!-- Font size 13px, Font weight 600, Color #0F2A4A, No underline, Gap 14px, Hover color #FF6A00 -->
+      <nav class="hidden lg:flex items-center text-[13px] font-semibold text-[#0F2A4A]" style="gap: 14px;">
+        <a href="#top" class="hover:text-brandOrange no-underline transition-colors whitespace-nowrap">Home</a>
+        <a href="#services" class="hover:text-brandOrange no-underline transition-colors whitespace-nowrap">Services</a>
+        <a href="#plans" class="hover:text-brandOrange no-underline transition-colors whitespace-nowrap">Fees</a>
+        <a href="#apply" class="hover:text-brandOrange no-underline transition-colors whitespace-nowrap">Apply</a>
+        <a href="#demo" class="hover:text-brandOrange no-underline transition-colors whitespace-nowrap">Demo Task</a>
+        <a href="#refer" class="hover:text-brandOrange no-underline transition-colors whitespace-nowrap">Refer &amp; Earn</a>
+        <a href="#about" class="hover:text-brandOrange no-underline transition-colors whitespace-nowrap">About</a>
+        <a href="#support" class="hover:text-brandOrange no-underline transition-colors whitespace-nowrap">Support</a>
+        <a href="#faq" class="hover:text-brandOrange no-underline transition-colors whitespace-nowrap">FAQ</a>
+        <a href="#blog" class="hover:text-brandOrange no-underline transition-colors whitespace-nowrap">Blog</a>
+      </nav>
+
+      <!-- Right Desktop Actions: Demo Practice button, Portal Login button, Apply Now button (Blue) -->
+      <div class="hidden lg:flex items-center gap-2.5 shrink-0">
+        <!-- Demo Practice button -->
+        <a href="#demo" class="px-3.5 py-2 text-[12.5px] font-bold text-[#0F2A4A] hover:text-brandOrange border border-slate-200 hover:border-brandOrange rounded-full transition-all flex items-center gap-1.5">
+          <i class="fa-solid fa-play text-[10px] text-brandOrange"></i>
+          <span>Demo Practice</span>
+        </a>
+
+        <!-- Portal Login button (Dark Blue #0F2A4A, White text, Border radius 999px, Padding 8px 16px) -->
+        <a href="https://naukri-pitara-tasks.base44.app" target="_blank" rel="noopener noreferrer" class="text-[12.5px] font-bold text-white bg-[#0F2A4A] hover:bg-slate-800 transition-all shadow-xs flex items-center gap-1.5 cursor-pointer" style="border-radius: 999px; padding: 8px 16px;">
+          <i class="fa-solid fa-lock text-[10px] text-brandOrange"></i>
+          <span>Portal Login</span>
+        </a>
+
+        <!-- Apply Now button (Blue) -->
+        <a href="#apply" class="text-[12.5px] font-bold text-white bg-blue-600 hover:bg-blue-700 transition-all shadow-xs flex items-center gap-1.5 cursor-pointer" style="border-radius: 999px; padding: 8px 16px;">
+          <span>Apply Now</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
+      </div>
+
+      <!-- Tablet & Mobile (< 1024px): Show ONLY Logo + Apply Now + Hamburger (3 lines) -->
+      <div class="flex lg:hidden items-center gap-2">
+        <a href="#apply" class="text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 transition-all shadow-xs cursor-pointer" style="border-radius: 999px; padding: 6px 14px;">
+          Apply Now
+        </a>
+        <button id="hamburgerBtn" onclick="toggleCompanyMenu()" class="p-2 text-[#0F2A4A] hover:bg-slate-100 rounded-lg transition-colors cursor-pointer" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars text-xl" id="hamburgerIcon"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Dropdown Menu (max-width 1023px): Shows all links; closes on click and scrolls smoothly -->
+    <div id="companyMobileMenu" class="hidden lg:hidden border-t border-slate-100 bg-white mt-3 pt-2 pb-4 shadow-xl px-2 transition-all">
+      <div class="flex flex-col space-y-1 text-sm font-semibold text-[#0F2A4A]">
+        <a href="#top" onclick="closeCompanyMenu()" class="px-3 py-2 rounded-md hover:bg-slate-50 hover:text-brandOrange transition-colors">Home</a>
+        <a href="#services" onclick="closeCompanyMenu()" class="px-3 py-2 rounded-md hover:bg-slate-50 hover:text-brandOrange transition-colors">Services</a>
+        <a href="#plans" onclick="closeCompanyMenu()" class="px-3 py-2 rounded-md hover:bg-slate-50 hover:text-brandOrange transition-colors">Fees</a>
+        <a href="#apply" onclick="closeCompanyMenu()" class="px-3 py-2 rounded-md hover:bg-slate-50 hover:text-brandOrange transition-colors">Apply</a>
+        <a href="#demo" onclick="closeCompanyMenu()" class="px-3 py-2 rounded-md hover:bg-slate-50 hover:text-brandOrange transition-colors">Demo Task</a>
+        <a href="#refer" onclick="closeCompanyMenu()" class="px-3 py-2 rounded-md hover:bg-slate-50 hover:text-brandOrange transition-colors">Refer &amp; Earn</a>
+        <a href="#about" onclick="closeCompanyMenu()" class="px-3 py-2 rounded-md hover:bg-slate-50 hover:text-brandOrange transition-colors">About</a>
+        <a href="#support" onclick="closeCompanyMenu()" class="px-3 py-2 rounded-md hover:bg-slate-50 hover:text-brandOrange transition-colors">Support</a>
+        <a href="#faq" onclick="closeCompanyMenu()" class="px-3 py-2 rounded-md hover:bg-slate-50 hover:text-brandOrange transition-colors">FAQ</a>
+        <a href="#blog" onclick="closeCompanyMenu()" class="px-3 py-2 rounded-md hover:bg-slate-50 hover:text-brandOrange transition-colors">Blog</a>
+      </div>
+
+      <div class="mt-3 pt-3 border-t border-slate-100 flex flex-col gap-2 px-2">
+        <a href="https://naukri-pitara-tasks.base44.app" target="_blank" rel="noopener noreferrer" onclick="closeCompanyMenu()" class="w-full text-center text-xs font-bold text-white bg-[#0F2A4A] hover:bg-slate-800 py-2.5 rounded-full flex items-center justify-center gap-1.5 shadow-xs">
+          <i class="fa-solid fa-lock text-[10px] text-brandOrange"></i>
+          <span>Portal Login</span>
+        </a>
+        <a href="#apply" onclick="closeCompanyMenu()" class="w-full text-center text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 py-2.5 rounded-full shadow-xs">
+          Apply Now
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================= -->
+  <!-- 1. HOME / HERO SECTION (#top)                             -->
+  <!-- ========================================================= -->
+  <section class="hero-pattern text-white pt-16 pb-24 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 text-orange-400 text-xs font-semibold mb-6">
+        <i class="fa-solid fa-building-shield"></i>
+        <span>Official WorkPitara Corporate Facilitation Environment</span>
+      </div>
+
+      <div class="max-w-3xl">
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight font-display">
+          WorkPitara Corporate Task Platform
+        </h1>
+        <p class="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+          WorkPitara provides a structured online task environment with demo access, task categories, clear workflow instructions, dashboard access and support information. Task access depends on eligibility, available work, submitted work, quality review and platform guidelines.
+        </p>
+
+        <div class="mt-8 flex flex-wrap items-center gap-4">
+          <a href="https://naukri-pitara-tasks.base44.app" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-lg bg-[#0F2A4A] border border-white/20 hover:bg-slate-800 text-white font-bold text-sm sm:text-base flex items-center gap-2.5 transition-all shadow-md">
+            <i class="fa-solid fa-lock text-brandOrange"></i>
+            <span>Portal Login</span>
+          </a>
+          
+          <a href="#demo" class="px-6 py-3.5 rounded-lg bg-brandOrange hover:bg-brandOrangeHover text-white font-bold text-sm sm:text-base flex items-center gap-2.5 transition-all shadow-lg hover:shadow-orange-500/25">
+            <i class="fa-solid fa-play"></i>
+            <span>Try Free Demo</span>
+          </a>
+
+          <a href="#services" class="px-5 py-3.5 rounded-lg text-slate-200 hover:text-white border border-white/15 hover:border-white/30 text-sm sm:text-base font-semibold transition-all">
+            Explore Services &darr;
+          </a>
+        </div>
+      </div>
+
+      <!-- Info Boxes -->
+      <div class="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-6">
+        <div class="bg-white/5 border border-white/10 rounded-xl p-5 backdrop-blur-sm">
+          <div class="w-10 h-10 rounded-lg bg-brandOrange/20 text-brandOrange flex items-center justify-center mb-3">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <h3 class="font-bold text-white text-base">Demo Access</h3>
+          <p class="text-xs text-slate-300 mt-1">Explore before registration</p>
+        </div>
+
+        <div class="bg-white/5 border border-white/10 rounded-xl p-5 backdrop-blur-sm">
+          <div class="w-10 h-10 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center mb-3">
+            <i class="fa-solid fa-book-open"></i>
+          </div>
+          <h3 class="font-bold text-white text-base">Training SOPs</h3>
+          <p class="text-xs text-slate-300 mt-1">Simple instructions included</p>
+        </div>
+
+        <div class="bg-white/5 border border-white/10 rounded-xl p-5 backdrop-blur-sm">
+          <div class="w-10 h-10 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center mb-3">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <h3 class="font-bold text-white text-base">Support Desk</h3>
+          <p class="text-xs text-slate-300 mt-1">Email helpdesk assistance</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 2. SERVICES SECTION (#services)                           -->
+  <!-- ========================================================= -->
+  <section id="services" class="py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-100 text-brandOrange font-bold text-xs uppercase tracking-wider mb-3">
+          <i class="fa-solid fa-list-check"></i> Enterprise Task Categories
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0F2A4A] font-display">
+          Available Services &amp; Work Categories
+        </h2>
+        <p class="mt-3 text-slate-600 text-sm sm:text-base">
+          Standardized digital modules built with clear guidelines, pre-formatted templates, and dedicated accuracy rubrics.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Category 1 -->
+        <div class="bg-white rounded-xl border border-slate-200 p-6 shadow-xs flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-blue-50 text-[#0F2A4A] flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-database"></i>
+            </div>
+            <h3 class="font-bold text-base text-[#0F2A4A]">Structured Data Management</h3>
+            <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+              Organizing, formatting, and standardizing database records into designated digital schemas.
+            </p>
+          </div>
+          <a href="#apply" class="mt-6 w-full py-2.5 px-3 text-xs font-bold text-[#0F2A4A] bg-slate-100 hover:bg-brandOrange hover:text-white rounded-lg transition-colors text-center block">
+            Apply For Category
+          </a>
+        </div>
+
+        <!-- Category 2 -->
+        <div class="bg-white rounded-xl border border-slate-200 p-6 shadow-xs flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-orange-50 text-brandOrange flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-file-lines"></i>
+            </div>
+            <h3 class="font-bold text-base text-[#0F2A4A]">Digital Form Management</h3>
+            <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+              Transferring data from source documents directly into digital entry web-forms with accuracy validation.
+            </p>
+          </div>
+          <a href="#apply" class="mt-6 w-full py-2.5 px-3 text-xs font-bold text-[#0F2A4A] bg-slate-100 hover:bg-brandOrange hover:text-white rounded-lg transition-colors text-center block">
+            Apply For Category
+          </a>
+        </div>
+
+        <!-- Category 3 -->
+        <div class="bg-white rounded-xl border border-slate-200 p-6 shadow-xs flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-file-word"></i>
+            </div>
+            <h3 class="font-bold text-base text-[#0F2A4A]">Document Transcription</h3>
+            <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+              Converting scanned PDF notes and printed drafts into clean, formatted digital Word/Doc files.
+            </p>
+          </div>
+          <a href="#apply" class="mt-6 w-full py-2.5 px-3 text-xs font-bold text-[#0F2A4A] bg-slate-100 hover:bg-brandOrange hover:text-white rounded-lg transition-colors text-center block">
+            Apply For Category
+          </a>
+        </div>
+
+        <!-- Category 4 -->
+        <div class="bg-white rounded-xl border border-slate-200 p-6 shadow-xs flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-spell-check"></i>
+            </div>
+            <h3 class="font-bold text-base text-[#0F2A4A]">Content Review &amp; Correction</h3>
+            <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+              Reviewing drafted text for basic grammar, spelling errors, punctuation, and structural consistency.
+            </p>
+          </div>
+          <a href="#apply" class="mt-6 w-full py-2.5 px-3 text-xs font-bold text-[#0F2A4A] bg-slate-100 hover:bg-brandOrange hover:text-white rounded-lg transition-colors text-center block">
+            Apply For Category
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 3. FEES SECTION (#plans)                                  -->
+  <!-- ========================================================= -->
+  <section id="plans" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-100 text-[#0F2A4A] font-bold text-xs uppercase tracking-wider mb-3">
+          <i class="fa-solid fa-shield-halved"></i> Transparent Terms
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0F2A4A] font-display">
+          Onboarding Fees &amp; Tier Plans
+        </h2>
+        <p class="mt-3 text-slate-600 text-sm sm:text-base">
+          WorkPitara maintains transparent administrative tiers. No hidden deductions or exaggerated salary promises.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        
+        <!-- Tier 1: Practice Demo -->
+        <div class="border-2 border-slate-200 rounded-2xl p-7 bg-white shadow-xs flex flex-col justify-between">
+          <div>
+            <span class="px-3 py-1 rounded-md bg-slate-100 text-slate-700 font-bold text-xs uppercase">Practice Tier</span>
+            <h3 class="text-2xl font-bold text-[#0F2A4A] mt-3">Demo &amp; Trial Access</h3>
+            <div class="text-3xl font-extrabold text-brandOrange mt-2">Free Trial</div>
+            <p class="text-xs text-slate-500 mt-3 leading-relaxed">
+              Test keyboard speed, verify captcha accuracy, and explore platform workflows before official registration.
+            </p>
+            <ul class="mt-6 space-y-2.5 text-xs text-slate-600">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brandOrange"></i> Sandbox Data Entry Demo</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brandOrange"></i> Real-time Character Check</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brandOrange"></i> Category SOP Overview</li>
+            </ul>
+          </div>
+          <a href="#demo" class="mt-8 w-full py-3 text-center bg-[#0F2A4A] text-white rounded-lg font-bold text-xs hover:bg-slate-800 transition-colors block">
+            Start Free Demo
+          </a>
+        </div>
+
+        <!-- Tier 2: Standard Portal Access -->
+        <div class="border-2 border-brandOrange rounded-2xl p-7 bg-orange-50/20 shadow-md flex flex-col justify-between relative">
+          <div class="absolute -top-3 right-6 bg-brandOrange text-white text-[11px] font-bold px-3 py-0.5 rounded-full uppercase">
+            Recommended
+          </div>
+          <div>
+            <span class="px-3 py-1 rounded-md bg-orange-100 text-brandOrange font-bold text-xs uppercase">Standard Tier</span>
+            <h3 class="text-2xl font-bold text-[#0F2A4A] mt-3">Verified Portal Onboarding</h3>
+            <div class="text-3xl font-extrabold text-[#0F2A4A] mt-2">Standard Access</div>
+            <p class="text-xs text-slate-500 mt-3 leading-relaxed">
+              Full workspace verification, personal ID allocation, dedicated queue routing, and direct helpdesk ticket support.
+            </p>
+            <ul class="mt-6 space-y-2.5 text-xs text-slate-700">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brandOrange"></i> Base44 Portal Credentials</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brandOrange"></i> Live Task Submission Ledger</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brandOrange"></i> Helpdesk Verification Desk</li>
+            </ul>
+          </div>
+          <a href="#apply" class="mt-8 w-full py-3 text-center bg-brandOrange text-white rounded-lg font-bold text-xs hover:bg-brandOrangeHover transition-colors block shadow-md">
+            Apply For Access
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 4. APPLY SECTION (#apply)                                 -->
+  <!-- Saves data to Google Sheet with Source: "Company Site"    -->
+  <!-- ========================================================= -->
+  <section id="apply" class="py-20 bg-slate-50 border-t border-b border-slate-200">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-10">
+        <span class="px-3 py-1 rounded-full bg-blue-100 text-[#0F2A4A] font-bold text-xs uppercase tracking-wider">
+          Official Registration Desk
+        </span>
+        <h2 class="text-3xl font-extrabold text-[#0F2A4A] mt-2 font-display">
+          Apply For WorkPitara Portal Onboarding
+        </h2>
+        <p class="text-xs text-slate-500 mt-1">
+          Submissions are dispatched directly to Google Sheet ID: <strong>1G1Gi9YJjbQ8CNWPS_O_nqRRSdX-AtbD980K8tj6-ahg</strong> with Source: <strong>Company Site</strong>.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-xs">
+        <form id="companyApplyForm" onsubmit="handleCompanyFormSubmit(event)" class="space-y-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">Full Name (As per documents) *</label>
+            <input type="text" id="compFullName" required placeholder="e.g. Ramesh Chandra" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:border-brandOrange" />
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">Mobile Number *</label>
+            <input type="tel" id="compMobile" required pattern="[0-9]{10}" maxlength="10" placeholder="10 Digit Mobile Number" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:border-brandOrange" />
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">Gmail Address *</label>
+            <input type="email" id="compEmail" required placeholder="name@gmail.com" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:border-brandOrange" />
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">City *</label>
+              <input type="text" id="compCity" required placeholder="City" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:border-brandOrange" />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">State *</label>
+              <input type="text" id="compState" required placeholder="State" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:border-brandOrange" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">Qualification *</label>
+              <select id="compQualification" required class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:border-brandOrange">
+                <option value="">Select Qualification</option>
+                <option value="10th Pass">10th Pass</option>
+                <option value="12th Pass">12th Pass</option>
+                <option value="Graduate">Graduate</option>
+                <option value="Post Graduate">Post Graduate</option>
+                <option value="Diploma">Diploma</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">Selected Plan</label>
+              <select id="compPlan" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:border-brandOrange">
+                <option value="Standard Portal Access">Standard Portal Access</option>
+                <option value="Practice Demo Access">Practice Demo Access</option>
+                <option value="Form Filling Module">Form Filling Module</option>
+                <option value="Data Entry Module">Data Entry Module</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" id="compSubmitBtn" class="w-full mt-4 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg transition-all shadow-md cursor-pointer flex items-center justify-center gap-2">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>Submit Application</span>
+          </button>
+
+          <p class="text-[11px] text-slate-400 text-center">
+            Source tag: <strong>Company Site</strong>. You will receive official helpdesk email confirmation.
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 5. DEMO TASK SECTION (#demo)                              -->
+  <!-- ========================================================= -->
+  <section id="demo" class="py-20 bg-slate-900 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-10">
+        <span class="px-3 py-1 rounded-full bg-brandOrange/20 text-brandOrange font-bold text-xs uppercase tracking-wider">
+          Interactive Sandbox
+        </span>
+        <h2 class="text-3xl font-extrabold text-white mt-2 font-display">
+          Experience Demo Task Workflow
+        </h2>
+        <p class="text-xs text-slate-400 mt-1">
+          Verify sample alphanumeric data entries and learn the formatting validation criteria before applying.
+        </p>
+      </div>
+
+      <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6 sm:p-8">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between text-xs text-slate-400">
+            <span>Sample Invoice Card: <strong>WP-CORP-902</strong></span>
+            <span class="text-emerald-400"><i class="fa-solid fa-circle text-[8px] mr-1"></i> Interactive Mode</span>
+          </div>
+
+          <div class="bg-slate-900 p-4 rounded-xl border border-slate-700 text-xs font-mono text-slate-300 grid grid-cols-2 sm:grid-cols-4 gap-2">
+            <div><span class="text-slate-500 block text-[10px]">VENDOR:</span> Reliance Retail</div>
+            <div><span class="text-slate-500 block text-[10px]">TAX ID:</span> RR-7721</div>
+            <div><span class="text-slate-500 block text-[10px]">PINCODE:</span> 400001</div>
+            <div><span class="text-slate-500 block text-[10px]">TOTAL:</span> ₹8,400</div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+            <div>
+              <label class="block text-slate-400 mb-1">Enter Vendor Name:</label>
+              <input type="text" id="demoVendorInput" placeholder="Reliance Retail" class="w-full bg-slate-950 border border-slate-700 rounded p-2 text-white text-xs focus:outline-none focus:border-brandOrange" />
+            </div>
+            <div>
+              <label class="block text-slate-400 mb-1">Enter Tax ID:</label>
+              <input type="text" id="demoTaxInput" placeholder="RR-7721" class="w-full bg-slate-950 border border-slate-700 rounded p-2 text-white text-xs focus:outline-none focus:border-brandOrange" />
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between pt-2">
+            <button onclick="checkCompanyDemo()" class="px-4 py-2 bg-brandOrange hover:bg-brandOrangeHover text-white text-xs font-bold rounded transition-colors cursor-pointer">
+              Validate Accuracy
+            </button>
+            <div id="demoFeedback" class="text-xs font-bold"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 6. REFER & EARN SECTION (#refer)                          -->
+  <!-- ========================================================= -->
+  <section id="refer" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs uppercase tracking-wider">
+          Community Expansion
+        </span>
+        <h2 class="text-3xl font-extrabold text-[#0F2A4A] mt-2 font-display">
+          Refer &amp; Earn Program
+        </h2>
+        <p class="text-sm text-slate-600 mt-2">
+          Invite colleagues and friends to practice demo modules. All referral bonuses are tracked transparently inside your authorized portal ledger upon approved task batch completion.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto text-center">
+        <div class="p-6 rounded-xl border border-slate-200 bg-slate-50">
+          <div class="text-2xl font-black text-brandOrange font-display mb-1">1. Share</div>
+          <h4 class="font-bold text-[#0F2A4A] text-sm">Send Portal Link</h4>
+          <p class="text-xs text-slate-500 mt-1">Share your unique practice invite from your portal dashboard.</p>
+        </div>
+        <div class="p-6 rounded-xl border border-slate-200 bg-slate-50">
+          <div class="text-2xl font-black text-brandOrange font-display mb-1">2. Onboard</div>
+          <h4 class="font-bold text-[#0F2A4A] text-sm">Demo Clearance</h4>
+          <p class="text-xs text-slate-500 mt-1">Referred members complete onboarding and review guidelines.</p>
+        </div>
+        <div class="p-6 rounded-xl border border-slate-200 bg-slate-50">
+          <div class="text-2xl font-black text-brandOrange font-display mb-1">3. Credit</div>
+          <h4 class="font-bold text-[#0F2A4A] text-sm">Dashboard Ledger</h4>
+          <p class="text-xs text-slate-500 mt-1">Credits update transparently upon audited work batch approvals.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 7. ABOUT SECTION (#about)                                 -->
+  <!-- ========================================================= -->
+  <section id="about" class="py-20 bg-slate-50 border-t border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <span class="px-3 py-1 rounded-full bg-slate-200 text-[#0F2A4A] font-bold text-xs uppercase tracking-wider">
+          Platform Governance
+        </span>
+        <h2 class="text-3xl font-extrabold text-[#0F2A4A] mt-2 font-display">
+          About WorkPitara
+        </h2>
+        <p class="mt-3 text-slate-600 text-sm leading-relaxed">
+          WorkPitara is a digital task facilitation platform that provides structured online tasks, workflow instructions and portal-based support. Task access depends on plan, eligibility, available work and quality.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-xs">
+          <h3 class="text-lg font-bold text-[#0F2A4A]">Task-Based Participation</h3>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            WorkPitara uses a task-based participation model. It is <strong>NOT</strong> traditional employment. It does <strong>NOT</strong> promise fixed salary or guaranteed earnings. Results depend on submitted work and quality.
+          </p>
+        </div>
+        <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-xs">
+          <h3 class="text-lg font-bold text-[#0F2A4A]">Ethical Transparency</h3>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            We operate strictly without fabricated corporate claims, fake registration counts, or misleading income snapshots. Every participant works at their own chosen schedule.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 8. SUPPORT SECTION (#support)                             -->
+  <!-- ========================================================= -->
+  <section id="support" class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-12">
+        <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs uppercase tracking-wider">
+          Verified Communication Desk
+        </span>
+        <h2 class="text-3xl font-extrabold text-[#0F2A4A] mt-2 font-display">
+          Support &amp; Verification Desk
+        </h2>
+        <p class="text-xs text-slate-500 mt-1">Direct official channels for portal access and guideline assistance:</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+        <div class="p-6 rounded-xl border border-slate-200 bg-slate-50">
+          <div class="w-10 h-10 rounded-full bg-orange-100 text-brandOrange mx-auto flex items-center justify-center mb-3">
+            <i class="fa-regular fa-envelope"></i>
+          </div>
+          <span class="text-[11px] font-bold text-slate-400 uppercase">Email Helpdesk</span>
+          <a href="mailto:workpitaraofficial@gmail.com" class="block font-bold text-xs text-[#0F2A4A] hover:text-brandOrange mt-1 break-all">
+            workpitaraofficial@gmail.com
+          </a>
+        </div>
+
+        <div class="p-6 rounded-xl border border-slate-200 bg-slate-50">
+          <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 mx-auto flex items-center justify-center mb-3">
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+          <span class="text-[11px] font-bold text-slate-400 uppercase">WhatsApp Desk</span>
+          <a href="https://wa.me/918750402917" target="_blank" rel="noopener noreferrer" class="block font-bold text-xs text-[#0F2A4A] hover:text-brandOrange mt-1">
+            8750402917
+          </a>
+        </div>
+
+        <div class="p-6 rounded-xl border border-slate-200 bg-slate-50">
+          <div class="w-10 h-10 rounded-full bg-blue-100 text-[#0F2A4A] mx-auto flex items-center justify-center mb-3">
+            <i class="fa-regular fa-clock"></i>
+          </div>
+          <span class="text-[11px] font-bold text-slate-400 uppercase">Operating Hours</span>
+          <span class="block font-bold text-xs text-[#0F2A4A] mt-1">
+            Mon-Sat 10 AM - 7 PM
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 9. FAQ SECTION (#faq)                                     -->
+  <!-- ========================================================= -->
+  <section id="faq" class="py-20 bg-slate-50 border-t border-b border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-12">
+        <span class="px-3 py-1 rounded-full bg-orange-100 text-brandOrange font-bold text-xs uppercase tracking-wider">
+          Got Questions?
+        </span>
+        <h2 class="text-3xl font-extrabold text-[#0F2A4A] mt-2 font-display">
+          Frequently Asked Questions
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-xs">
+          <h4 class="font-bold text-sm text-[#0F2A4A]">Q1: How do I access task guidelines?</h4>
+          <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+            All standard operating procedures (SOPs) are available inside your authorized portal dashboard at <a href="https://naukri-pitara-tasks.base44.app" target="_blank" rel="noopener noreferrer" class="text-brandOrange underline">Base44 Portal</a>.
+          </p>
+        </div>
+
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-xs">
+          <h4 class="font-bold text-sm text-[#0F2A4A]">Q2: Do I need a laptop or can I work from a mobile phone?</h4>
+          <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+            While basic practice and review can be seen on mobile, a desktop or laptop is strongly recommended for standard typing and data entry productivity.
+          </p>
+        </div>
+
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-xs">
+          <h4 class="font-bold text-sm text-[#0F2A4A]">Q3: How are task payouts processed?</h4>
+          <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+            Task balances undergo automated accuracy checks and manual validation. Cleared sums are transferred via verified UPI ID or direct NEFT/IMPS bank transfer.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 10. BLOG SECTION (#blog)                                  -->
+  <!-- ========================================================= -->
+  <section id="blog" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="px-3 py-1 rounded-full bg-blue-100 text-[#0F2A4A] font-bold text-xs uppercase tracking-wider">
+          Safety &amp; Guides
+        </span>
+        <h2 class="text-3xl font-extrabold text-[#0F2A4A] mt-2 font-display">
+          WorkPitara Blog &amp; Safety Updates
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <article class="p-6 rounded-xl border border-slate-200 bg-slate-50 flex flex-col justify-between">
+          <div>
+            <span class="text-[11px] font-bold text-rose-600 uppercase">Fraud Alert</span>
+            <h4 class="text-base font-bold text-[#0F2A4A] mt-1">WhatsApp &amp; Telegram Security Deposit Scams</h4>
+            <p class="text-xs text-slate-600 mt-2">
+              Never pay ₹3,000 security deposit to unknown individuals. Understand legitimate task SOPs and keep your funds secure.
+            </p>
+          </div>
+          <a href="#support" class="text-xs font-bold text-brandOrange hover:underline mt-4 inline-block">Read Safety Advisory &rarr;</a>
+        </article>
+
+        <article class="p-6 rounded-xl border border-slate-200 bg-slate-50 flex flex-col justify-between">
+          <div>
+            <span class="text-[11px] font-bold text-blue-600 uppercase">Banking Guide</span>
+            <h4 class="text-base font-bold text-[#0F2A4A] mt-1">How UPI and Direct Bank Transfers Clear</h4>
+            <p class="text-xs text-slate-600 mt-2">
+              Step-by-step documentation on how task validation leads to verified account balance payouts.
+            </p>
+          </div>
+          <a href="#support" class="text-xs font-bold text-brandOrange hover:underline mt-4 inline-block">Read Banking Guide &rarr;</a>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- FOOTER                                                    -->
+  <!-- ========================================================= -->
+  <footer class="bg-[#0F2A4A] text-slate-300 py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-800 text-xs">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full bg-[#0F2A4A] border-2 border-brandOrange flex items-center justify-center text-white font-bold">
+            WP
+          </div>
+          <div>
+            <span class="font-bold text-white text-base font-display">WorkPitara</span>
+            <p class="text-[9px] uppercase tracking-wider text-slate-400">INDIA KA APNA WORK ADDA</p>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-4 text-slate-400">
+          <a href="#top" class="hover:text-white">Home</a>
+          <a href="#services" class="hover:text-white">Services</a>
+          <a href="#plans" class="hover:text-white">Fees</a>
+          <a href="#about" class="hover:text-white">About</a>
+          <a href="#support" class="hover:text-white">Support</a>
+          <a href="https://naukri-pitara-tasks.base44.app" target="_blank" rel="noopener noreferrer" class="hover:text-brandOrange font-bold">Portal Login</a>
+        </div>
+      </div>
+      <div class="pt-6 text-center text-xs text-slate-500">
+        &copy; 2026 WorkPitara All rights reserved. Helpdesk: <a href="mailto:workpitaraofficial@gmail.com" class="text-slate-400 hover:text-white">workpitaraofficial@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Success Notification Modal -->
+  <div id="companySuccessModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 modal-backdrop">
+    <div class="bg-white rounded-2xl max-w-sm w-full p-6 text-center shadow-2xl border border-slate-200">
+      <div class="w-14 h-14 rounded-full bg-emerald-100 text-emerald-600 mx-auto flex items-center justify-center text-2xl mb-4">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+      <h3 class="text-xl font-bold text-[#0F2A4A] font-display">Thank You!</h3>
+      <p class="text-sm font-semibold text-slate-700 mt-2">Our team will contact you soon.</p>
+      <p class="text-xs text-slate-500 mt-1 leading-relaxed">
+        Your registration details have been securely logged under source <span class="font-bold text-[#0F2A4A]">Company Site</span> into our central helpdesk sheet.
+      </p>
+      <button onclick="document.getElementById('companySuccessModal').classList.add('hidden')" class="mt-6 w-full py-2.5 bg-[#0F2A4A] hover:bg-slate-800 text-white rounded-lg text-sm font-bold transition-colors cursor-pointer">
+        Continue
+      </button>
+    </div>
+  </div>
+
+  <script>
+    // Header navigation controls
+    function toggleCompanyMenu() {
+      const menu = document.getElementById('companyMobileMenu');
+      const icon = document.getElementById('hamburgerIcon');
+      menu.classList.toggle('hidden');
+      if (menu.classList.contains('hidden')) {
+        icon.className = 'fa-solid fa-bars text-xl';
+      } else {
+        icon.className = 'fa-solid fa-xmark text-xl';
+      }
+    }
+
+    function closeCompanyMenu() {
+      const menu = document.getElementById('companyMobileMenu');
+      const icon = document.getElementById('hamburgerIcon');
+      if (menu && !menu.classList.contains('hidden')) {
+        menu.classList.add('hidden');
+        if (icon) icon.className = 'fa-solid fa-bars text-xl';
+      }
+    }
+
+    // Interactive Demo Sandbox
+    function checkCompanyDemo() {
+      const v = (document.getElementById('demoVendorInput')?.value || '').trim().toLowerCase();
+      const t = (document.getElementById('demoTaxInput')?.value || '').trim().toUpperCase();
+      const fb = document.getElementById('demoFeedback');
+      if (v === 'reliance retail' && t === 'RR-7721') {
+        fb.innerHTML = '<span class="text-emerald-400"><i class="fa-solid fa-check mr-1"></i> 100% Accuracy Matched!</span>';
+      } else {
+        fb.innerHTML = '<span class="text-rose-400"><i class="fa-solid fa-xmark mr-1"></i> Check vendor name &amp; tax ID.</span>';
+      }
+    }
+
+    // Company Site Data Collection -> Google Sheet
+    // Sheet ID: 1G1Gi9YJjbQ8CNWPS_O_nqRRSdX-AtbD980K8tj6-ahg
+    // Source: "Company Site"
+    async function handleCompanyFormSubmit(e) {
+      e.preventDefault();
+      const btn = document.getElementById('compSubmitBtn');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
+      btn.disabled = true;
+
+      const record = {
+        sheetId: '1G1Gi9YJjbQ8CNWPS_O_nqRRSdX-AtbD980K8tj6-ahg',
+        date: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+        fullName: document.getElementById('compFullName').value.trim(),
+        mobile: document.getElementById('compMobile').value.trim(),
+        email: document.getElementById('compEmail').value.trim(),
+        city: document.getElementById('compCity').value.trim(),
+        state: document.getElementById('compState').value.trim(),
+        qualification: document.getElementById('compQualification').value,
+        plan: document.getElementById('compPlan').value,
+        source: 'Company Site',
+        notificationEmail: 'workpitaraofficial@gmail.com'
+      };
+
+      try {
+        const formData = new URLSearchParams();
+        Object.keys(record).forEach(k => formData.append(k, record[k]));
+
+        await fetch(`https://script.google.com/macros/s/AKfycby-workpitara/exec`, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: formData.toString()
+        }).catch(() => {});
+      } catch (err) {}
+
+      btn.innerHTML = originalText;
+      btn.disabled = false;
+      document.getElementById('companyApplyForm').reset();
+      document.getElementById('companySuccessModal').classList.remove('hidden');
+      document.getElementById('companySuccessModal').classList.add('flex');
+    }
+  </script>
+
+</body>
+</html>

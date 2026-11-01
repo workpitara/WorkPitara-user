@@ -73,54 +73,61 @@
 <body class="bg-white text-slate-800 antialiased selection:bg-brandOrange selection:text-white">
 
   <!-- ========================================================= -->
-  <!-- 1. HEADER (White Header, No Portal Login in Header)      -->
-  <!-- Actions: ONLY Apply Now & Try Demo Task                   -->
+  <!-- 1. HEADER (WORKPITARA USER SITE HEADER)                   -->
+  <!-- Left: WP Blue Circle Logo, WorkPitara, Tagline            -->
+  <!-- Center: Home, About, Task Categories, Top Earners,         -->
+  <!--         Testimonials, Blogs, Apply Now                    -->
+  <!-- Right: Try Demo Task (Orange #FF6A00) & Portal Login      -->
   <!-- ========================================================= -->
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 transition-all duration-200 shadow-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         
-        <!-- Logo -->
-        <a href="#home" class="flex items-center gap-3 group">
-          <div class="w-12 h-12 rounded-full bg-brandDark border-2 border-brandOrange flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
-            <span class="text-white font-extrabold text-xl font-display tracking-tight">WP</span>
+        <!-- Left: Logo -->
+        <a href="#home" class="flex items-center gap-3 shrink-0 group">
+          <div class="w-11 h-11 rounded-full bg-brandDark border-2 border-brandOrange flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+            <span class="text-white font-extrabold text-lg font-display tracking-tight">WP</span>
           </div>
           <div class="flex flex-col">
             <div class="flex items-center gap-1.5">
-              <span class="text-2xl font-black text-brandDark tracking-tight font-display">WorkPitara</span>
+              <span class="text-xl sm:text-2xl font-black text-brandDark tracking-tight font-display">WorkPitara</span>
               <span class="inline-block w-2 h-2 rounded-full bg-brandOrange"></span>
             </div>
-            <span class="text-[9.5px] uppercase tracking-widest font-bold text-slate-500">INDIA KA APNA WORK ADDA</span>
+            <span class="text-[9px] uppercase tracking-widest font-bold text-slate-500">INDIA KA APNA WORK ADDA</span>
           </div>
         </a>
 
-        <!-- Desktop Navigation -->
-        <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-600">
+        <!-- Center: Menu links — Home, About, Task Categories, Top Earners, Testimonials, Blogs, Apply Now -->
+        <nav class="hidden lg:flex items-center gap-5 xl:gap-6 text-sm font-semibold text-slate-600">
           <a href="#home" class="hover:text-brandOrange transition-colors">Home</a>
           <a href="#about" class="hover:text-brandOrange transition-colors">About</a>
-          <a href="#categories" class="hover:text-brandOrange transition-colors">Task Categories</a>
-          <a href="#earners" class="hover:text-brandOrange transition-colors">Top Earners</a>
+          <a href="#categories" class="hover:text-brandOrange transition-colors whitespace-nowrap">Task Categories</a>
+          <a href="#earners" class="hover:text-brandOrange transition-colors whitespace-nowrap">Top Earners</a>
           <a href="#testimonials" class="hover:text-brandOrange transition-colors">Testimonials</a>
           <a href="#blogs" class="hover:text-brandOrange transition-colors">Blogs</a>
-        </nav>
-
-        <!-- Header Actions: ONLY Apply Now and Try Demo Task -->
-        <div class="hidden sm:flex items-center gap-3">
-          <button onclick="openApplyModal()" class="px-4 py-2.5 text-sm font-semibold text-brandDark border border-slate-300 rounded-lg hover:border-brandDark hover:bg-slate-50 transition-all shadow-xs cursor-pointer">
+          <button onclick="openApplyModal()" class="hover:text-brandOrange font-bold transition-colors cursor-pointer whitespace-nowrap">
             Apply Now
           </button>
-          <a href="#auth" class="px-5 py-2.5 text-sm font-bold text-white bg-brandOrange hover:bg-brandOrangeHover rounded-lg transition-all shadow-md hover:shadow-orange-500/20 flex items-center gap-2 cursor-pointer">
+        </nav>
+
+        <!-- Right: Try Demo Task button (Orange #FF6A00) and Portal Login button linking to Base44 -->
+        <div class="hidden sm:flex items-center gap-3 shrink-0">
+          <a href="#auth" class="px-4 py-2.5 text-xs sm:text-sm font-bold text-white bg-brandOrange hover:bg-brandOrangeHover rounded-lg transition-all shadow-md hover:shadow-orange-500/20 flex items-center gap-1.5 cursor-pointer">
             <i class="fa-solid fa-play text-xs"></i>
             <span>Try Demo Task</span>
+          </a>
+          <a href="https://naukri-pitara-tasks.base44.app" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 text-xs sm:text-sm font-bold text-white bg-brandDark hover:bg-slate-800 rounded-lg transition-all shadow-md flex items-center gap-1.5 cursor-pointer">
+            <i class="fa-solid fa-lock text-xs text-brandOrange"></i>
+            <span>Portal Login</span>
           </a>
         </div>
 
         <!-- Mobile Menu Button -->
-        <div class="flex sm:hidden items-center gap-2">
-          <button onclick="openApplyModal()" class="px-3 py-1.5 text-xs font-bold text-brandDark border border-slate-300 rounded-md">
+        <div class="flex lg:hidden items-center gap-2">
+          <button onclick="openApplyModal()" class="px-3 py-1.5 text-xs font-bold text-brandDark border border-slate-300 rounded-md sm:hidden">
             Apply
           </button>
-          <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="p-2.5 text-slate-700 hover:text-brandDark rounded-lg hover:bg-slate-100 transition-colors" aria-label="Toggle Menu">
+          <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="p-2.5 text-slate-700 hover:text-brandDark rounded-lg hover:bg-slate-100 transition-colors cursor-pointer" aria-label="Toggle Menu">
             <i class="fa-solid fa-bars text-xl" id="menuIcon"></i>
           </button>
         </div>
@@ -128,21 +135,22 @@
     </div>
 
     <!-- Mobile Drawer -->
-    <div id="mobileMenu" class="hidden sm:hidden border-t border-slate-100 bg-white px-4 pt-3 pb-6 shadow-xl transition-all">
-      <div class="flex flex-col space-y-3.5 text-base font-semibold text-slate-700">
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-100 bg-white px-4 pt-3 pb-6 shadow-xl transition-all">
+      <div class="flex flex-col space-y-3 text-base font-semibold text-slate-700">
         <a href="#home" onclick="toggleMobileMenu()" class="px-2 py-1.5 hover:text-brandOrange border-b border-slate-50">Home</a>
         <a href="#about" onclick="toggleMobileMenu()" class="px-2 py-1.5 hover:text-brandOrange border-b border-slate-50">About</a>
         <a href="#categories" onclick="toggleMobileMenu()" class="px-2 py-1.5 hover:text-brandOrange border-b border-slate-50">Task Categories</a>
         <a href="#earners" onclick="toggleMobileMenu()" class="px-2 py-1.5 hover:text-brandOrange border-b border-slate-50">Top Earners</a>
         <a href="#testimonials" onclick="toggleMobileMenu()" class="px-2 py-1.5 hover:text-brandOrange border-b border-slate-50">Testimonials</a>
         <a href="#blogs" onclick="toggleMobileMenu()" class="px-2 py-1.5 hover:text-brandOrange border-b border-slate-50">Blogs</a>
+        <button onclick="openApplyModal(); toggleMobileMenu();" class="text-left px-2 py-1.5 hover:text-brandOrange border-b border-slate-50 font-bold">Apply Now</button>
       </div>
       <div class="pt-4 flex flex-col gap-2.5">
-        <button onclick="openApplyModal(); toggleMobileMenu();" class="w-full py-2.5 text-sm font-semibold text-brandDark border border-slate-300 rounded-lg text-center">
-          Apply Now
-        </button>
         <a href="#auth" onclick="toggleMobileMenu()" class="w-full py-2.5 text-sm font-bold text-white bg-brandOrange hover:bg-brandOrangeHover rounded-lg text-center flex items-center justify-center gap-2 shadow-sm">
           <i class="fa-solid fa-play text-xs"></i> Try Demo Task
+        </a>
+        <a href="https://naukri-pitara-tasks.base44.app" target="_blank" rel="noopener noreferrer" onclick="toggleMobileMenu()" class="w-full py-2.5 text-sm font-bold text-white bg-brandDark hover:bg-slate-800 rounded-lg text-center flex items-center justify-center gap-2 shadow-sm">
+          <i class="fa-solid fa-lock text-xs text-brandOrange"></i> Portal Login
         </a>
       </div>
     </div>
