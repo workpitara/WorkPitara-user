@@ -1,0 +1,7 @@
+{
+  "name": "WorkPitara Online Task Platform",
+  "description": "WorkPitara provides a structured online task environment with demo access, task categories, clear workflow instructions, dashboard access and support information.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

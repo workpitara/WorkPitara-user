@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+}
+
+.hero-pattern {
+  background-color: #0F2A4A;
+  background-image: radial-gradient(rgba(255, 106, 0, 0.14) 1px, transparent 1px), radial-gradient(rgba(255, 255, 255, 0.08) 1px, #0F2A4A 1px);
+  background-size: 36px 36px;
+  background-position: 0 0, 18px 18px;
+}
